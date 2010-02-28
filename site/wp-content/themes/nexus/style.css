@@ -1,0 +1,459 @@
+/*
+Theme Name: Nexus
+Theme URI: http://XiFOX.net
+Description: Theme desarrollado para el instituto de inglés Nexus
+Version: 0
+Author: XiFOX.net
+Author URI: http://XiFOX.net/
+Tags: Nexus
+*/
+/* v1.0 | 20080212 */
+/***reset***/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***end-reset***/
+
+
+/***header****/
+#header{
+width:821px;
+height:350px;
+margin:0px 0 0 -148px;
+padding:0px 139px;
+background:url(images/header_bg.png) no-repeat center top;
+/*position:relative;*/
+}
+/*div#circle{
+  background:url(images/circle.png) no-repeat transparent;
+  width:334px; height:334px;
+  position:absolute;
+  top:0; left:-135px;
+  z-index: 100
+}
+div#esquina{
+  background:url(images/esquina.png) no-repeat transparent;
+  width:301px; height:299px;
+  position:absolute;
+  top:1px; right:-97px;
+  z-index: 100
+}*/
+/*div#header div.logo{
+ /* position:absolute;
+  top:0; left:0;
+  z-index: 1000
+}*/
+div#header div.description{
+  /*background:url(images/description.png) no-repeat transparent;*/
+  width:280px; height:28px;
+  margin:-5px 0 0 120px;
+  /*color:transparent;*/
+ /* position:absolute;
+  top:100px; left:0;
+  z-index: 1000*/
+}
+/***end-header****/
+
+body
+{
+background:url(images/bg.gif) repeat #000000;
+padding:0;
+/*font: normal 62.5% arial, sans-serif;*/
+font-family:arial, sans-serif; font-size:12px;
+margin:0px auto auto auto;
+color:#36322b;
+}
+p{
+padding:0px;
+text-align:justify;
+margin:  10px 20px  10px 25px;
+line-height:20px;
+}
+p.welcome{
+padding:30px 35px 0 35px;
+margin:0;
+}
+p.testimonial{
+font-style:italic;
+padding:5px 15px 0 5px;
+}
+h2{
+  color:#e77817;
+  margin:0 0 10px 25px;
+  font-size:22px;
+}
+
+
+.clear{
+clear:both;
+}
+a{
+text-decoration:underline;
+}
+a.read_more{
+display:block;
+width:66px;
+height:23px;
+line-height:23px;
+text-align:center;
+color:#fff;
+float:right;
+margin:10px 40px 0 0;
+padding:0 0 0 17px;
+text-decoration:none;
+font-size:12px;
+background:url(images/read_more_bg.gif) no-repeat center;
+}
+a:hover.read_more{
+text-decoration:underline;
+}
+img.left_img{
+float:left;
+padding:3px 25px 3px 3px;
+}
+
+#main_container{
+width:821px;
+height:auto;
+margin:auto;
+padding:0px;
+}
+
+.logo{
+padding:30px 0 0 0px;
+}
+.title{
+width: auto;
+padding:2px 0 10px 0;
+font-size:17px;
+color:#2e2721;
+font-weight:bold;
+}
+.title_welcome{
+width: auto;
+padding:0 0 0 35px;
+font-size:22px;
+color:#24a4b3;
+background:url(images/checked.gif) no-repeat left top;
+margin:0 0 10px 25px;
+}
+span.red{
+font-weight:bold;
+color:#da5b23;
+}
+span.orange{
+font-weight:bold;
+color:#da5b23;
+}
+
+/*---------------- menu tab----------------------*/
+.menu{
+width:821px;
+height:42px;
+margin:-215px 0 0 0px;
+background:url(images/menu_bg.gif) no-repeat left;
+}
+.menu ul{
+list-style:none;
+padding:0 0 0 15px;
+margin:0px;
+}
+.menu ul li{
+display:inline;
+}
+.menu ul li a{
+float:left;
+height:42px;
+border:none;
+padding:0 15px 0 15px;
+text-decoration:none;
+color:#fff;
+line-height:42px;
+font-size:14px;
+}
+.menu ul li.current_page_item a{
+float:left;
+height:42px;
+border:none;
+padding:0 15px 0 15px;
+text-decoration:none;
+color:#fff;
+line-height:42px;
+font-size:14px;
+background:url(images/menu_bullet.gif) no-repeat bottom center;
+}
+.menu ul li a:hover{
+background:url(images/menu_bullet.gif) no-repeat bottom center;
+}
+
+/*-------------welcome_box------------*/
+.welcome_box{
+width:496px;
+height:202px;
+background:url(images/welcome_box.gif) no-repeat center;
+padding:0px;
+}
+/*---------------center_content-------*/
+.center_content{
+width:821px;
+height:auto;
+clear:both;
+padding:25px 0 0 0;
+background-color:#e9e5e2;
+}
+.center_left{
+width:500px;
+float:left;
+padding:10px 0 10px 10px;
+}
+.center_right{
+width:300px;
+float:left;
+padding:0 0 10px 0px;
+}
+.center_widecolumn{
+width:auto;
+float:left;
+padding:10px
+}
+.software_box{
+width:187px;
+height:265px;
+padding:0 0 15px 50px;
+}
+.features{
+padding:10px 0 0 30px;
+}
+.news_box{
+float:left;
+width:auto;
+border-bottom:1px #CCCCCC dashed;
+padding:10px 0 8px 0;
+}
+.news_icon{
+width:30px;
+height:33px;
+float:left;
+background:url(images/news_icon.gif) no-repeat center;
+}
+.news_content{
+width:400px;
+float:left;
+text-align:justify;
+line-height:20px;
+padding:0 0 0 10px;
+}
+/*-----------------------login_form-------------------*/
+#sidebar ul{
+  padding:0;
+  list-style: none;
+}
+#sidebar ul li{
+width:288px;
+height:145px;
+margin: 5px 0;
+padding: 15px 8px;
+background:url(images/text_box.png) no-repeat center;
+background-position:0px 0px;
+list-style: none;
+}
+#sidebar ul li.widget_text{
+background:#E77817 none repeat scroll 0 0;
+font-size:22px;
+font-weight:bold;
+height:auto;
+margin:15px;
+padding:15px;
+text-align:center;
+width:245px;
+}
+#sidebar ul li.widget_text span{
+  font-size: 19px;
+}
+#sidebar ul li h2{
+margin: 2px 0 0px 0px;
+width: auto;
+padding:2px 0 5px 20px;
+font-size:17px;
+color:#E77817;
+background-color:#605D5C;
+font-weight:bold;
+}
+#sidebar ul li div div{
+  margin: 4px 0 0 18px;
+  padding: 0;
+}
+#sidebar ul li#calendario-de-eventos{
+width:auto;
+height:auto;
+padding: 0;
+background: none;
+background-position:0px 0px;
+list-style: none;
+margin:7px 0px 30px 20px;
+}
+#sidebar ul li#calendario-de-eventos h2{
+ margin: 7px 0 7px 5px;
+}
+#sidebar ul li ul li{
+float:left;
+width:120px;
+height:auto;
+padding: 0 0 0 10px;
+background: none;
+background-position:0px 0px;
+list-style: none;
+margin: 7px;
+}
+#sidebar ul li ul li a{
+   text-decoration: none;
+   color: #000;
+   padding: 0 0 0 20px;
+   line-height: 17px;
+   background: url(images/bullet_list_v.png) no-repeat left top;
+   border-bottom:0 none;
+}
+#sidebar ul li ul li a:hover{
+   color: #605d5c;
+   background: url(images/bullet_list_h.png) no-repeat left top;
+   border-bottom:0 none;
+}
+#sidebar ul li ul li ul li{
+   padding:0;
+   margin: 0;
+}
+.login_form_row{
+float:left;
+padding:4px 0 4px 0;
+}
+label.login_label{
+width:70px;
+float:left;
+padding:3px 5px 0 0;
+color:#000;
+text-align:right;
+}
+input.login_input{
+width:153px;
+height:18px;
+float:left;
+border:1px #9dbbc6 solid;
+background-color:#fff;
+color: #000;
+}
+input.login{
+float:right;
+padding:10px 20px 0 0;
+}
+/*----------------------list-------------------------*/
+ul.list{
+list-style:none;padding:0px;margin:0px; 
+}
+ul.list li{
+list-style:none;width: auto;height: auto;padding:0px; margin:8px 0 8px 0;
+}
+ul.list li a{
+height:24px; width: auto; padding:0 0 0 15px; margin:0;color:#36322b;text-align:left;line-height:24px;
+text-decoration:none;
+}
+ul.list li span{
+height:24px; width:24px; display:block;padding:0px; margin:0px;color:#000;text-align:center; float:left; float:left; line-height:24px;
+background:url(images/bullet_list.gif) no-repeat left;
+}
+ul.list li a:hover{
+text-decoration:underline;
+}
+.testimonials{
+padding:20px 0 20px 0;
+}
+/*-------------------footer------------------------*/
+#footer{
+ background:url(images/fnd-footer.png) no-repeat left;
+width:821px;
+height:65px;
+clear:both;
+color:#837d7b;
+position:relative;
+}
+.left_footer{
+float:left;
+padding:50px 0 0 0;
+}
+.left_footer ul li{
+  float:left
+
+}
+#footer a{
+color:#fff;
+padding:0 8px 0 8px;
+text-decoration:none;
+}
+#footer a:hover{
+color:#605d5c
+}
+.right_footer{
+float:right;
+padding:50px 0px 0 0 ;
+}
+#esquinaderecha{
+background:url(images/esquinaderabajo.png) no-repeat left;
+width:132px;
+height:134px;
+position:absolute;
+bottom:0; right:-132px;
+}
+#esquinaizquierda{
+background:url(images/esquinaizqabajo.png) no-repeat left;
+width:123px;
+height:206px;
+position:absolute;
+bottom:0; left:-123px;
+}
