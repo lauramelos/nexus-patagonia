@@ -12,6 +12,10 @@ get_header(); ?>
           <div class="welcome_box">
             
             <p class="welcome">
+             <?php 
+              $args = 'displayTitle=false displayStyle="DT_TEASER_MORE" titleBefore="<h3>" titleAfter="</h3>"  more="continue&raquo"';
+             if(function_exists('iinclude_page')) iinclude_page(5,$args); ?>
+
               <span class="orange">Lorem ipsum dolor sit amet, consectetur adipisicing elit </span><br/>
 
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a dui non diam porttitor semper vitae ut massa. Proin augue enim, feugiat ac sodales eget, accumsan sed arcu. Donec elit lorem, congue nec dapibus vitae, imperdiet iaculis risus. Nam lacus odio, varius nec malesuada quis, aliquam a felis.  
