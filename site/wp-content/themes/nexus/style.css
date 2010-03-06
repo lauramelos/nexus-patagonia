@@ -112,11 +112,49 @@ margin:0px auto auto auto;
 color:#36322b;
 }
 p{
-padding:0px;
+font-size: 1.2em;
+padding: 0px;
 text-align:justify;
-margin:  10px 20px  10px 25px;
-line-height:20px;
+margin:  6px 0px;
+line-height:18px;
 }
+h1{
+font-size: 1.2em;
+font-weight:bold;
+color:#da5b23;
+}
+
+/*-------------welcome_box------------*/
+.welcome_box{
+width:436px;
+height:148px;
+background:url(images/nexus-sprite.png) no-repeat left top;
+padding:25px 32px 29px 28px;
+position:relative;
+}
+
+a.more{
+display:block;
+width:66px;
+height:23px;
+line-height:23px;
+text-align:center;
+color:#fff;
+padding:0 0 0 17px;
+text-decoration:none;
+background: transparent url(images/nexus-sprite.png) no-repeat -496px 0;
+position:absolute;
+bottom: 30px; right:32px;
+}
+a:hover.more{
+background-position: -579px 0;
+
+}
+a:active.more{
+  bottom:29px;
+}
+
+
 p.welcome{
 padding:30px 35px 0 35px;
 margin:0;
@@ -138,23 +176,8 @@ clear:both;
 a{
 text-decoration:underline;
 }
-a.read_more{
-display:block;
-width:66px;
-height:23px;
-line-height:23px;
-text-align:center;
-color:#fff;
-float:right;
-margin:10px 40px 0 0;
-padding:0 0 0 17px;
-text-decoration:none;
-font-size:12px;
-background:url(images/read_more_bg.gif) no-repeat center;
-}
-a:hover.read_more{
-text-decoration:underline;
-}
+
+
 img.left_img{
 float:left;
 padding:3px 25px 3px 3px;
@@ -189,10 +212,7 @@ span.red{
 font-weight:bold;
 color:#da5b23;
 }
-span.orange{
-font-weight:bold;
-color:#da5b23;
-}
+
 
 /*---------------- menu tab----------------------*/
 .menu{
@@ -234,13 +254,7 @@ background:url(images/menu_bullet.gif) no-repeat bottom center;
 background:url(images/menu_bullet.gif) no-repeat bottom center;
 }
 
-/*-------------welcome_box------------*/
-.welcome_box{
-width:496px;
-height:202px;
-background:url(images/welcome_box.gif) no-repeat center;
-padding:0px;
-}
+
 /*---------------center_content-------*/
 .center_content{
 width:821px;

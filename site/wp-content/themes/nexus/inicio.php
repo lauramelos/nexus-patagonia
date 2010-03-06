@@ -3,26 +3,27 @@
  Template Name: Inicio
 */
 
-get_header(); ?>
+get_header();
 
+
+?>
+	<?php if (have_posts()) : ?>
+
+		<?php while (have_posts()) : the_post(); ?>
 	<!--div id="content" class="narrowcolumn" role="main"-->
 <div class="center_content">
         <div class="center_left">
 
           <div class="welcome_box">
-            
-            <p class="welcome">
-             <?php 
+              <h1> <?php  
+              $post_ID=get_the_ID();
+              
+              echo get_post_meta($post_ID, 'subtitulo', true);?></h1>
+              <?php
               $args = 'displayTitle=false displayStyle="DT_TEASER_MORE" titleBefore="<h3>" titleAfter="</h3>"  more="continue&raquo"';
-             if(function_exists('iinclude_page')) iinclude_page(5,$args); ?>
-
-              <span class="orange">Lorem ipsum dolor sit amet, consectetur adipisicing elit </span><br/>
-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a dui non diam porttitor semper vitae ut massa. Proin augue enim, feugiat ac sodales eget, accumsan sed arcu. Donec elit lorem, congue nec dapibus vitae, imperdiet iaculis risus. Nam lacus odio, varius nec malesuada quis, aliquam a felis.  
-
-            </p>
-            <a class="read_more" href="#">leer más</a>
-          </div>
+              if(function_exists('iinclude_page')) iinclude_page(5,'displaytitle=false&more=Leer más');
+              ?>
+         </div>
 
           <div class="features">
             <div class="title">Valores</div>
@@ -53,6 +54,14 @@ get_header(); ?>
 
          </div>
 </div>
+<?php endwhile; ?>
+  	<?php else : ?>
+
+		<h2 class="center">Not Found</h2>
+		<p class="center">Sorry, but you are looking for something that isn't here.</p>
+		<?php get_search_form(); ?>
+
+	<?php endif; ?>
 
 <?php get_sidebar(); ?>
  <div class="clear"></div>
