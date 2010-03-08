@@ -3,6 +3,14 @@
  * @package WordPress
  * @subpackage Nexus
  */
+function excerpt_ellipse($text) {
+   return str_replace('[...]', ' <a href="'.get_permalink().'">Leer más...</a>', $text); }
+add_filter('the_excerpt', 'excerpt_ellipse');
+
+function new_excerpt_length($length) {
+	return 30;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
 
 automatic_feed_links();
 

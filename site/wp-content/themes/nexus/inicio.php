@@ -26,31 +26,55 @@ get_header();
          </div>
 
           <div class="features">
-            <div class="title">Valores</div>
-
-                    <ul class="list">
-                    <li><span>1</span><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a></li>
-                    <li><span>2</span><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a></li>
-                    <li><span>3</span><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a></li>
-                    <li><span>4</span><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a></li>
-                    </ul>
+            <h3>Servicios</h3>
+            <ol class="list">
+              <?php $args = array(
+                                  'depth'        => 1,
+                                  'show_date'    => '',
+                                  'date_format'  => get_option('date_format'),
+                                  'child_of'     => 7,
+                                  'exclude'      => '',
+                                  'include'      => '',
+                                  'title_li'     => false,
+                                  'echo'         => 1,
+                                  'authors'      => '',
+                                  'sort_column'  => 'menu_order, post_title',
+                                  'link_before'  => '',
+                                  'link_after'   => '',
+                                  'exclude_tree' => '' );
+              wp_list_pages( $args );
+              ?>
+            </ol>
          </div>
 
 
          <div class="features">
-            <div class="title">Novedades</div>
-                <div class="news_box">
-                    <div class="news_icon"></div>
-                    <div class="news_content">
-                    “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <h3>Novedades</h3>
+
+            <?php
+            $posts = get_posts('numberposts=3&order=DES&orderby=post_date');
+            foreach ($posts as $post) : start_wp(); ?>
+
+
+           <div class="news_box">
+                    <div class="news_icon">
+                      <acronym class="published" title="<?php the_time('F jS, Y'); ?>">
+                        <span class="pub-month"><?php the_time('M'); ?></span>
+                        <span class="pub-date"><?php the_time('j'); ?></span>
+                      </acronym>
                     </div>
-                </div>
-                <div class="news_box">
-                    <div class="news_icon"></div>
                     <div class="news_content">
-                    “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </div>
+                      <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h1>
+                      
+                      <?php the_excerpt(); ?>
+             </div>
                 </div>
+            <?php
+            endforeach;
+            ?>
+
+      
+               
 
          </div>
 </div>
